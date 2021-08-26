@@ -1,41 +1,13 @@
 .s-hero {
-    background: url('../assets/img-bg.png') no-repeat;
+    background-image: url('../assets/img-bg.png');
+    background-repeat:  no-repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
+    height: 70.0rem;
+    padding-top: 14rem;
     .container {
-        header {
-            padding-top: 3.8rem;
-            padding-bottom: 11.3rem;
-            @include flex(row, center, space-between);
-            nav {
-                display: flex;
-                align-items: center;
-                ul {
-                    display: flex;
-                    align-items: center;
-                    li {
-                        display: flex;
-                        align-items: center;
-                        :not(:last-child) {
-                            margin-left: 4.7rem;
-                        }
-                        a {
-                            font-weight: 500;
-                            line-height: 19px;
-                            color: rgba(255, 255, 255, 0.7);
-                            transition: all .3s;
-                            &:hover {
-                                color: white;
-                            }
-                        }
-                        img {
-                            margin-left: 1.2rem;
-                        }
-                    }
-                }
-            }
-        }
+        
         .info {
             padding-bottom: 13.8rem;
             width: 100%;
@@ -77,8 +49,68 @@
                 margin-bottom: 4rem ;
             }
         }
+
+        @include responsive(768px) {
+            .info {
+                text-align: center;
+                margin: 0 auto;
+                @include flex(column, center, center);
+            }
+        }  
+       
+        @include responsive(368px) {
+            .s-hero {
+                height: 6rem;
+                .info {
+                    .now {
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    h1 {
+                        max-width: 100%;
+                        font-size: 3rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
-}
+    @include responsive(800px) {
+        background: #242424;
+        height: 53rem;
+            .container {
+            .info {
+                h1 {
+                    font-size: 4rem;
+                }
+                span {
+                    display: none;
+                }
+            }
+            }
+        }  
+    @include responsive(468px) {
+                height: 64rem;
+                .container {
+                    .info {
+                        .now {
+                            margin-bottom: 1.2rem;
+                        }
+                        h1 {
+                            max-width: 36.6rem;
+                            margin-bottom: 1.6rem;
+                            font-size: 4rem;
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            } 
+    }  
 
 .s-tarifas {
     padding-top: 9.6rem;
@@ -135,6 +167,43 @@
         }
         .image {
             margin-top: -13rem;
+        }
+    }
+    @include responsive(1024px) {
+        .container {
+            @include flex(column, center, center);
+            .title {
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 6rem;
+            }
+            .image {
+                display: none;
+            }
+        }
+    }
+    @include responsive(468px) {
+        .container {
+            .all-cards {
+                @include flex(column, center, center);
+                .card {
+                    .icon {
+                        text-align: center;
+                        &:before {
+                            left: 47%;
+                        }
+                    }
+                    margin: 3rem auto;
+                    h4 {
+                        text-align: center;
+                        max-width: 100%;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+            
         }
     }
 }
@@ -237,6 +306,187 @@
                     top: 15.5rem;
                     right: 7.3rem;
                 }
+                }
+            }
+        }
+    }
+    @include responsive(1112px) {
+        .container {
+            .top {
+                flex-direction: column;
+                .titles {
+                    margin-bottom: 4rem;
+                }
+                .buttons {
+                    margin-bottom: 6rem;
+                }
+            }
+        }
+    }
+    @include responsive(968px) {
+        padding-top: 2.9rem;
+        padding-bottom: 5.4rem;
+        .container {
+            .card-info {
+                height: 74.4rem;
+                flex-direction: column;
+                .info {
+                    @include flex(column, center, center);
+                    margin-left: 0;
+                    text-align: center;
+                    margin-top: 4rem;
+                   h3,
+                   p {
+                       max-width: 50%;
+                   }
+                   p {
+                       margin-bottom: 1.4rem;
+                   }
+                }
+                .image {
+                    img {
+                        &.cartao-black {
+                            top: -49.9rem;
+                            right: 14rem;
+                        }
+                        &.mockup {
+                            top: -35.3rem;
+                            right: 8.6rem;
+                        }
+                        &.footer {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(768px) {
+        .container {
+            .top {
+                .buttons {
+                    a {
+                        margin-right: 5.3rem;
+                    }
+                }
+            }
+            .card-info {
+                .image {
+                    img {
+                        &.cartao-black {
+                            right: 9rem;
+                        }
+                        &.mockup {
+                            top: -38.3rem;
+                            right: 3.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(468px) {
+        .container {
+            .top {
+                .titles {
+                    h2 {
+                        font-size: 3.5rem;
+                    }
+                }
+                .buttons {
+                    a {
+                        margin-right: 2rem;
+                        &.black {
+                            padding: 1.8rem 2.5rem;
+                        }
+                    }
+                }
+            }
+            .card-info {
+                .info {
+                    h3 {
+                        max-width: 20.3rem;
+                        font-size: 2.2rem;
+                    }
+                    p {
+                        max-width: 30.7rem;
+                    }
+                }
+                .image {
+                    img {
+                        &.mockup {
+                            top: -29.3rem;
+                        }
+                        &.cartao-black {
+                            top: -41.9rem;
+                            right: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(375px) {
+        .container {
+            .top {
+                .titles {
+                    h2 {
+                        font-size: 3rem;
+                        text-align: center;
+                    }
+                    span {
+                        font-size: 2.5rem;
+                    }
+                }
+                .buttons {
+                    margin-bottom: 2rem;
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .card-info {
+                height: 59.4rem;
+                
+                .image {
+                    img {
+                        &.mockup {
+                            top: -23.5rem;
+                             right: 1.6rem;
+                        }
+                        &.cartao-black {
+                            top: -34.9rem;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(360px) {
+
+        .container {
+            .top {
+                .buttons {
+                    margin-bottom: 2rem;
+                    a {
+                        margin-right: 2.3rem;
+                    }
+                }
+            }
+            .card-info {
+                height: 59.4rem;
+                
+                .image {
+                    img {
+                        &.mockup {
+                            top: -22.5rem;
+                        }
+                        &.cartao-black {
+                            top: -34.9rem;
+                            right: 0;
+                        }
+                    }
                 }
             }
         }

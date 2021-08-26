@@ -12,6 +12,13 @@
     &:hover {
         background-color: #F9C313;
     }
+    @include responsive(468px) {
+        padding: 1.1rem 3rem;
+        font-size: 1.2rem;
+    }
+    @include responsive(368px) {
+        padding: 1.1rem 2rem;
+    }
 }
 
 .btn-secondary {
@@ -29,5 +36,8 @@
     &:hover {
         background-color: $brand-white;
         color: $brand-black;
+    }
+    @include responsive(368px) {
+        padding: 1.1rem 2rem;
     }
 }

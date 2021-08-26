@@ -10,6 +10,12 @@
 
 html {
     font-size: 62.5%;
+    @include responsive(768px) {
+        font-size: 50%;
+    }
+    @include responsive(468px) {
+        font-size: 62.5%;
+    }
 }
 
 html,
