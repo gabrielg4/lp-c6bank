@@ -1,0 +1,33 @@
+.btn-primary {
+    display: inline-block;
+    padding: 1.1rem 5rem;
+    background-color: yellow;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: $brand-black;
+    transition: all .4s;
+    &:hover {
+        background-color: #F9C313;
+    }
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 1.1rem 5rem;
+    border: 1px solid white;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    line-height: 18px;
+    transition: all .4s;
+    &:hover {
+        background-color: $brand-white;
+        color: $brand-black;
+    }
+}
