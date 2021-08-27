@@ -293,10 +293,12 @@
                     &.cartao-black {
                     top: -6%;
                     z-index: 1;
+                    animation: floating 6s infinite;
                 }
                     &.mockup {
                         bottom: 0px;
                         left: -3%;
+                        animation: floating 8s infinite;
                 }
                 &.footer {
                     right: -7.3rem;
